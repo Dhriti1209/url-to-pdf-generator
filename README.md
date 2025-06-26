@@ -55,47 +55,54 @@ my-app/
   npm install -g pm2
   
 **2. Clone the Repository**
+```bash
 git clone https://github.com/Dhriti1209/url-to-pdf-generator.git
 cd url_pdf
-
+```
 **3. Install Dependencies**
 Backend
+```bash
 cd backend
 npm install
+```
 Frontend
+```bash
 cd ../frontend
 npm install
-
+```
 **4. Environment Variables**
+```bash
 Create a .env file inside the backend/ folder:
 PORT=5000
 MINIO_ENDPOINT=http://localhost:9000
 MINIO_ACCESS_KEY=minioadmin
 MINIO_SECRET_KEY=minioadmin
 BUCKET_NAME=bucket1
-
+```
 **5. Start MinIO with Docker**
-```docker run -p 9000:9000 -p 9001:9001 --name minio1 \
+```bash
+docker run -p 9000:9000 -p 9001:9001 --name minio1 \
 -v "C:\minio\data:/data" \
 -e "MINIO_ROOT_USER=minioadmin" \
 -e "MINIO_ROOT_PASSWORD=minioadmin" \
-minio/minio:RELEASE.2024-07-10T18-41-49Z server /data --console-address ":9001"```
+minio/minio:RELEASE.2024-07-10T18-41-49Z server /data --console-address ":9001"
+```
 Access MinIO Dashboard: http://localhost:9001
 Login using:
 
-Username: minioadmin
+**Username**: minioadmin
 
-Password: minioadmin
+**Password**: minioadmin
 
 ➡️ Create a bucket named: bucket1
 
 **6. Run the Project using PM2**
-
-```pm2 start ecosystem.config.js
+```bash
+pm2 start ecosystem.config.js
 pm2 logs        # View logs
 pm2 save        # Save the process list```
-
-🧪 How It Works
+```
+**🧪 How It Works**
 User inputs a URL into the frontend.
 
 Frontend sends the URL to the backend via a REST API.
