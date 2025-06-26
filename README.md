@@ -20,45 +20,26 @@ A full-stack web application that allows users to input a URL and generate a dow
 
 my-app/
 
-├── backend/ # Node.js + Express + TypeScript API
-
+├── backend/                   # Node.js + Express + TypeScript API
 │ ├── src/
-
-│ │ ├── index.ts # Express server entry point
-
-│ │ ├── routes/ # API routes
-
-│ │ └── services/ # PDF generation & storage logic
-
-│ ├── package.json # Backend dependencies
-
-│ └── tsconfig.json # Backend TypeScript config
-
+│ │ ├── index.tsm              # Express server entry point
+│ │ ├── routes/                # API routes
+│ │ └── services/              # PDF generation & storage logic
+│ ├── package.json             # Backend dependencies
+│ └── tsconfig.json            # Backend TypeScript config
 │
-
-├── frontend/ # React + TypeScript + Tailwind UI
-
+├── frontend/                  # React + TypeScript + Tailwind UI
 │ ├── src/
-
-│ │ ├── App.tsx # Main React component
-
-│ │ └── index.tsx # React entry point
-
-│ ├── public/ # Static files
-
-│ ├── package.json # Frontend dependencies
-
-│ └── tsconfig.json # Frontend TypeScript config
-
+│ │ ├── App.tsx                # Main React component
+│ │ └── index.tsx              # React entry point
+│ ├── public/                  # Static files
+│ ├── package.json             # Frontend dependencies
+│ └── tsconfig.json            # Frontend TypeScript config
 │
-
-├── ecosystem.config.js # PM2 process manager config
-
-├── .gitignore # Files ignored by Git
-
-├── README.md # Project documentation
-
-└── package.json # Root-level scripts (optional)
+├── ecosystem.config.js        # PM2 process manager config
+├── .gitignore                 # Files ignored by Git
+├── README.md                  # Project documentation
+└── package.json               # Root-level scripts (optional)
 
 
 
