@@ -19,24 +19,27 @@ A full-stack web application that allows users to input a URL and generate a dow
 ## 📁 Project Structure
 
 my-app/
-├── backend/
-│ ├── src/
-│ │ ├── index.ts # Express server entry
-│ │ ├── routes/ # API routes
-│ │ └── services/ # PDF generation & storage logic
-│ ├── package.json
-│ └── tsconfig.json
-├── frontend/
-│ ├── src/
-│ │ ├── App.tsx # Main React component
-│ │ └── index.tsx # Entry point
-│ ├── public/
-│ ├── package.json
-│ └── tsconfig.json
-├── ecosystem.config.js # PM2 configuration
-├── .gitignore
-├── README.md
-└── package.json # Optional root-level
+├── backend/                # Backend server (Node.js + Express + TypeScript)
+│   ├── src/
+│   │   ├── index.ts        # Entry point for Express server
+│   │   ├── routes/         # API route handlers
+│   │   └── services/       # PDF generation, storage, and business logic
+│   ├── package.json        # Backend dependencies and scripts
+│   └── tsconfig.json       # TypeScript config for backend
+│
+├── frontend/               # Frontend (React + TypeScript + Tailwind)
+│   ├── src/
+│   │   ├── App.tsx         # Main React component
+│   │   └── index.tsx       # React entry point
+│   ├── public/             # Static assets (favicon, index.html, etc.)
+│   ├── package.json        # Frontend dependencies and scripts
+│   └── tsconfig.json       # TypeScript config for frontend
+│
+├── ecosystem.config.js     # PM2 process manager configuration
+├── .gitignore              # Files and folders to be ignored by Git
+├── README.md               # Project documentation
+└── package.json            # Optional root-level dependencies and scripts
+
 
 
 ---
