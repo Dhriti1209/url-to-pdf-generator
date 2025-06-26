@@ -18,25 +18,25 @@ A full-stack web application that allows users to input a URL and generate a dow
 
 ## 📁 Project Structure
 
-my-app/
+my-app/  
 ├── backend/  
-│ ├── src/
-│ │ ├── index.ts
-│ │ ├── routes/
-│ │ └── services/
-│ ├── package.json
-│ └── tsconfig.json
-├── frontend/
-│ ├── src/
-│ │ ├── App.tsx
-│ │ └── index.tsx
-│ ├── public/
-│ ├── package.json
-│ └── tsconfig.json
-├── ecosystem.config.js
-├── .gitignore
-├── README.md
-└── package.json
+│ ├── src/  
+│ │ ├── index.ts  
+│ │ ├── routes/  
+│ │ └── services/  
+│ ├── package.json  
+│ └── tsconfig.json  
+├── frontend/  
+│ ├── src/  
+│ │ ├── App.tsx  
+│ │ └── index.tsx  
+│ ├── public/  
+│ ├── package.json  
+│ └── tsconfig.json  
+├── ecosystem.config.js  
+├── .gitignore  
+├── README.md  
+└── package.json  
 
 
 
