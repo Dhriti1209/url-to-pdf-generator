@@ -128,7 +128,8 @@ Avoid hardcoding secret keys in production.
 Use .env and secure them with .gitignore.
 
   
-**💡 Future Enhancements****
+**💡 Future Enhancements**  
+
 Add PDF customization (paper size, orientation).
 
 Integrate Celery + Redis for queueing heavy tasks.
