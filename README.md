@@ -19,7 +19,7 @@ A full-stack web application that allows users to input a URL and generate a dow
 ## 📁 Project Structure
 
 my-app/
-├── backend/
+├── backend/  
 │ ├── src/
 │ │ ├── index.ts
 │ │ ├── routes/
