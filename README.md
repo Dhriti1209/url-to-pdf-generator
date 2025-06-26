@@ -59,6 +59,8 @@ my-app/
 git clone https://github.com/Dhriti1209/url-to-pdf-generator.git
 cd url_pdf
 ```
+
+
 **3. Install Dependencies**
 Backend
 ```bash
@@ -70,6 +72,7 @@ Frontend
 cd ../frontend
 npm install
 ```
+
 **4. Environment Variables**
 ```bash
 Create a .env file inside the backend/ folder:
@@ -79,6 +82,7 @@ MINIO_ACCESS_KEY=minioadmin
 MINIO_SECRET_KEY=minioadmin
 BUCKET_NAME=bucket1
 ```
+
 **5. Start MinIO with Docker**
 ```bash
 docker run -p 9000:9000 -p 9001:9001 --name minio1 \
@@ -87,6 +91,7 @@ docker run -p 9000:9000 -p 9001:9001 --name minio1 \
 -e "MINIO_ROOT_PASSWORD=minioadmin" \
 minio/minio:RELEASE.2024-07-10T18-41-49Z server /data --console-address ":9001"
 ```
+
 Access MinIO Dashboard: http://localhost:9001
 Login using:
 
@@ -94,14 +99,17 @@ Login using:
 
 **Password**: minioadmin
 
+  
 ➡️ Create a bucket named: bucket1
 
+  
 **6. Run the Project using PM2**
 ```bash
 pm2 start ecosystem.config.js
 pm2 logs        # View logs
 pm2 save        # Save the process list```
 ```
+
 **🧪 How It Works**
 User inputs a URL into the frontend.
 
@@ -111,13 +119,15 @@ Backend uses Puppeteer to convert the page to PDF.
 
 PDF is uploaded to MinIO and a signed URL is returned.
 
-Frontend shows the link for download.
+Frontend shows the link for download.  
+
 
 **🛡️ Security Note**
 Avoid hardcoding secret keys in production.
 
 Use .env and secure them with .gitignore.
-**
+
+  
 **💡 Future Enhancements****
 Add PDF customization (paper size, orientation).
 
