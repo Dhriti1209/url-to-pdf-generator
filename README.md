@@ -111,31 +111,30 @@ pm2 save        # Save the process list```
 ```
 
 **🧪 How It Works**
-User inputs a URL into the frontend.
+- User inputs a URL into the frontend.
 
-Frontend sends the URL to the backend via a REST API.
+- Frontend sends the URL to the backend via a REST API.
 
-Backend uses Puppeteer to convert the page to PDF.
+- Backend uses Puppeteer to convert the page to PDF.
 
-PDF is uploaded to MinIO and a signed URL is returned.
+- PDF is uploaded to MinIO and a signed URL is returned.
 
-Frontend shows the link for download.  
+- Frontend shows the link for download.  
 
 
 **🛡️ Security Note**
-Avoid hardcoding secret keys in production.
+- Avoid hardcoding secret keys in production.
 
-Use .env and secure them with .gitignore.
+- Use .env and secure them with .gitignore.
 
   
 **💡 Future Enhancements**  
 
-Add PDF customization (paper size, orientation).
+- Add PDF customization (paper size, orientation).
+  
 
-Integrate Celery + Redis for queueing heavy tasks.
+- Add user authentication.
 
-Add user authentication.
-
-Deploy to cloud with CI/CD.
+- Deploy to cloud with CI/CD.
 
 
