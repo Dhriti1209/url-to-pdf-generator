@@ -1,16 +1,18 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "file1.js",
+  "main": "app.js",
   "url": "https://google.com",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.10.3",
     "aws-sdk": "^2.1692.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "md5": "^2.3.0",

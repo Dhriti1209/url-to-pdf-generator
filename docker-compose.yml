@@ -1,0 +1,77 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - rabbitmq
+      - minio
+    env_file:
+      - ./backend/.env
+    command: node app.js
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev -- --host
+    networks:
+      - app-network
+
+  consumer:
+    build:
+      context: ./backend
+    container_name: consumer
+    depends_on:
+      - rabbitmq
+      - backend
+    env_file:
+      - ./backend/.env
+    command: node consumer.js
+    networks:
+      - app-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - app-network
+
+  minio:
+    image: minio/minio:RELEASE.2024-07-10T18-41-49Z
+    container_name: minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001" 
+    volumes:
+      - minio-data:/data
+    environment:
+      MINIO_ROOT_USER: ROOTUSER
+      MINIO_ROOT_PASSWORD: CHANGEME123
+    networks:
+      - app-network
+
+volumes:
+  minio-data:
+
+networks:
+  app-network:
+    driver: bridge

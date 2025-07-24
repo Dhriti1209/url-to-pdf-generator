@@ -1,0 +1,18 @@
+# frontend/Dockerfile
+
+FROM node:20
+
+WORKDIR /app
+
+# Only copy the lock files first
+COPY package.json package-lock.json ./
+
+# Install deps inside the Linux container (correct esbuild)
+RUN npm install
+
+# Now copy the remaining code
+COPY . .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev", "--", "--host"]

@@ -18,10 +18,14 @@
   "homepage": "https://github.com/Dhriti1209/url-to-pdf-generator#readme",
   "description": "",
   "devDependencies": {
+    "esbuild-wasm": "^0.25.5",
     "node": "^20.19.0",
     "npm": "^10.8.2"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "amqplib": "^0.10.8",
+    "aws-sdk": "^2.1692.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0"
   }
 }
